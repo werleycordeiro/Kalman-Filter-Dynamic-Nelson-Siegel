@@ -44,7 +44,7 @@ def kalman(para,Y,lik,prev,ahead,matu):
  phi = np.identity(N)
  H = np.identity(W)
  Q = np.identity(N)
- #import Nelson_Siegel_factor_loadings as Nelson_Siegel_factor_loadings 
+ import Nelson_Siegel_factor_loadings as Nelson_Siegel_factor_loadings 
  Z = Nelson_Siegel_factor_loadings(lam=lam,matu=matu)
  for i in range(0,W):
  	H[i,i] = para[i+1]
